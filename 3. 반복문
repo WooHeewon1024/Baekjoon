@@ -1,0 +1,235 @@
+// 3-1
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = 1; i < 10; i++) {
+		printf("%d * %d = %d\n", n, i, n * i);
+	}
+
+	return 0;
+}
+
+// 3-2
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		int a, b;
+		scanf("%d %d", &a, &b);
+		printf("%d\n", a + b);
+	}
+
+	return 0;
+}
+
+// 3-3
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int n;
+	int sum=0;
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		sum = sum + i;
+	}
+	printf("%d", sum);
+
+	return 0;
+}
+
+// 3-4
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int price;
+	int n;
+	int total=0;
+	scanf("%d", &price);
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		int a, b;
+		scanf("%d %d", &a, &b);
+		total = total + a * b;
+	}
+	if (price == total) {
+		printf("Yes");
+	}
+	else {
+		printf("No");
+	}
+
+	return 0;
+}
+
+
+// 3-5
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	if (n % 4 != 0) {
+		n = n / 4 + 1;
+	}
+	else {
+		n = n / 4;
+	}
+	for (int i = 0; i < n; i++) {
+		printf("long ");
+	}
+	printf("int");
+
+	return 0;
+}
+
+// 3-6
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	long long a, b;
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%lld %lld", &a, &b);
+		printf("%lld\n", a + b);
+	}
+
+	return 0;
+}
+
+// 3-7
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	long long a, b;
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%lld %lld", &a, &b);
+		printf("Case #%d: %lld\n", i+1,a + b);
+	}
+
+	return 0;
+}
+
+
+// 3-8
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	long long a, b;
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%lld %lld", &a, &b);
+		printf("Case #%d: %lld + %lld = %lld\n", i+1,a,b,a + b);
+	}
+
+	return 0;
+}
+
+// 3-9
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		for (int j = 1; j <= i+1; j++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+
+// 3-10
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = n - 1; i >= 0; i--) {
+		for (int j = 0; j < i; j++) {
+			printf(" ");
+		}
+		for (int k= 0; k < n-i; k++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+
+// 3-11
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int a, b;
+	while (1) {
+		scanf("%d %d", &a, &b);
+		if (a == 0 && b == 0) {
+			return 0;
+		}
+		printf("%d\n", a + b);
+	}
+	return 0;
+}
+
+// 3-12
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#pragma warning(disable:4996)
+
+int main() {
+	int a, b;
+	while (1) {
+		
+		if (scanf("%d %d", &a, &b) == EOF) break;
+		printf("%d\n", a + b);
+	}
+	return 0;
+}
+
+
+
