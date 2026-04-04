@@ -1,0 +1,162 @@
+:root {
+  --sky-1: #9bd4ff;
+  --sky-2: #eaf7ff;
+  --sun: #ffcc33;
+  --sun-strong: #f7a600;
+  --ink: #17324d;
+  --ink-soft: #4a647e;
+  --card: rgba(255, 255, 255, 0.85);
+  --edge: rgba(255, 255, 255, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(150deg, var(--sky-1) 0%, var(--sky-2) 52%, #fff8e5 100%);
+  overflow-x: hidden;
+}
+
+.bg-shape {
+  position: fixed;
+  z-index: 0;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(6px);
+}
+
+.bg-shape-a {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255, 191, 71, 0.55), rgba(255, 191, 71, 0));
+  right: -40px;
+  top: -30px;
+}
+
+.bg-shape-b {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(42, 157, 244, 0.34), rgba(42, 157, 244, 0));
+  left: -80px;
+  bottom: -90px;
+}
+
+.app-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.5rem, 4.2vw, 2rem);
+  letter-spacing: 0.02em;
+}
+
+.app-header p {
+  margin: 6px 0 0;
+  color: var(--ink-soft);
+}
+
+.control-card,
+.compass-card,
+.info-card {
+  background: var(--card);
+  border: 1px solid var(--edge);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 30px rgba(26, 74, 117, 0.12);
+  margin-top: 14px;
+}
+
+.control-card {
+  padding: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row.two {
+  margin-top: 8px;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #c7dff3;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  color: #0d2b47;
+  background: linear-gradient(180deg, #ffd166, #ffb703);
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+button:active {
+  transform: translateY(1px) scale(0.995);
+}
+
+button.secondary {
+  background: linear-gradient(180deg, #d7ecff, #b8dbfb);
+}
+
+.hidden {
+  display: none;
+}
+
+.status {
+  margin: 10px 2px 2px;
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+}
+
+.compass-card {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  width: min(92vw, 420px);
+  height: min(92vw, 420px);
+  display: block;
+}
+
+.info-card {
+  padding: 12px;
+}
+
+.info-card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .app-wrap {
+    padding-top: 30px;
+  }
+
+  .control-card {
+    padding: 14px;
+  }
+}

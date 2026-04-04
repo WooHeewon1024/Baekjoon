@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+dist/
+*.exe
+*.dll
+*.so
+*.class
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.Python
+
+# Environment
+.env
+.env.local

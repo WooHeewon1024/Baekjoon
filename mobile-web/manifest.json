@@ -1,0 +1,22 @@
+{
+  "name": "Sun Direction Mobile",
+  "short_name": "SunDirection",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#eaf7ff",
+  "theme_color": "#ffb703",
+  "description": "실시간 햇빛 방향을 모바일에서 확인하는 앱",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "../assets/sun-direction-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/sun-direction-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
